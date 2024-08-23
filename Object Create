@@ -1,0 +1,22 @@
+import React from 'react'
+
+const App = () => {
+
+const person = {
+  name: 'Abinash',
+  age: 22,
+  gmail: 'abinashgouda7924@gmail.com',
+  pincode: 761121
+}
+
+  return (
+    <div>
+      <h1>Name = {person.name} </h1>
+      <h1>Age = {person.age} </h1>
+      <h1>Gmail = {person.gmail} </h1>
+      <h1>Pincode = {person.pincode} </h1>
+    </div>
+  )
+}
+
+export default App
