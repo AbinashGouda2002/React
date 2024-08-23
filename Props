@@ -1,0 +1,55 @@
+            Export File 
+________________________________________________________
+import React from 'react'
+
+const Product = (props) => {
+
+  return (
+    <div>
+      <h2>Mobile Name = {props.title}</h2>
+      <h3>Mobile Brand = {props.brand}</h3>
+      <h4>Mobile Price = {props.price}</h4>
+    </div>
+  )
+}
+
+export default Product
+
+
+             Import File
+_________________________________________________________
+import React from 'react'
+import Product from './Product'
+
+const App = () => {
+
+  return (
+    <>
+    <Product title="Galaxy S24 Ultra" brand="Samsung" price={150000} />        //(Reused all components)
+  </>
+  )
+}
+
+export default App
+
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+
+        Reused Components
+_______________________________________
+import React from 'react'
+import Product from './Product'
+
+const App = () => {
+
+  return (
+    <>
+    <Product title="Galaxy S24 Ultra" brand="Samsung" price={150000} />
+    <Product title="GT Master" brand="Realme" price={30000} />
+    <Product title="Redmi Note 10" brand="Xiaomi" price={15000} />
+    <Product title="OnePlus Nord 4" brand="OnePlus" price={30000} />
+  </>
+  )
+}
+
+export default App
