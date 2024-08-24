@@ -1,0 +1,43 @@
+Why useState :- The normal variables are immutable in ReactJS if we try to change the variable value then it will not reflect into the UI
+___________________________________________________________________________________________________________________________________________
+
+      Counter.jsx
+_______________________________
+import React from 'react'
+
+const Counter = () => {
+  let count = 0;
+  const Incounter = () => count++;
+  const Decounter = () => count--; 
+
+  return (
+    <>
+   <h1>{count}</h1>
+   <button onClick={()=>Incounter}>Increate</button>
+   <button onClick={Decounter}>Decounter</button>
+    </>
+  )
+}
+
+export default Counter
+
+__________________________________________________________________________________________________________________________________________
+
+          App.jsx
+____________________________________
+import React from 'react'
+import { useState } from 'react';
+
+const App = () => {
+  const [counter, setCounter] = useState(0);
+
+  return (
+    <>
+  <h1>{counter}</h1>
+  <button onClick={()=> setCounter(counter+1)}>Increase</button>
+  <button onClick={()=> setCounter(counter-1)}>Decrease</button>
+  </>
+  );
+};
+
+export default App;
